@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -58,6 +58,12 @@
     <Compile Include="Command\Plain.cs" />
     <Compile Include="Command\Pong.cs" />
     <Compile Include="Command\Text.cs" />
+    <Compile Include="Compatible\CompatibleProtocol.cs" />
+    <Compile Include="Compatible\CompatibleReceiveFilter.cs" />
+    <Compile Include="Compatible\CompatibleServer.cs" />
+    <Compile Include="Compatible\CompatibleSession.cs" />
+    <Compile Include="Compatible\ICompatibleDataFrame.cs" />
+    <Compile Include="Compatible\ICompatibleSession.cs" />
     <Compile Include="Config\CommandConfig.cs" />
     <Compile Include="Config\CommandConfigCollection.cs" />
     <Compile Include="Config\SubProtocolConfig.cs" />
