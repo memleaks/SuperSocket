@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,11 +19,9 @@ namespace SuperSocket.WebSocket.Compatible
 			OnHandshakeSuccess();
 		}
 
-		public bool NonWebSocketSend(byte[] data, int offset, int count)
+		public void NonWebSocketSend(byte[] data, int offset, int count)
 		{
-			return TrySendRawData(new List<ArraySegment<byte>> {
-				new ArraySegment<byte>(data, offset, count),
-			});
+			BaseSend(data, offset, count);
 		}
 		#endregion
 	}

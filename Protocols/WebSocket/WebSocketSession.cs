@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
@@ -402,6 +402,11 @@ namespace SuperSocket.WebSocket
 
             ProtocolProcessor.SendData(this, data, offset, length);
         }
+
+		protected void BaseSend(byte[] data, int offset, int length)
+		{
+			base.Send(data, offset, length);
+		}
 
         /// <summary>
         /// Tries to send the data over the websocket connection.

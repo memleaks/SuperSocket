@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +11,6 @@ namespace SuperSocket.WebSocket.Compatible
 	{
 		IReceiveFilter<IWebSocketFragment> DetectedNonWebSocketFilter(byte[] data);
 		void NonWebSocketSessionStarted();
-		bool NonWebSocketSend(byte[] data, int offset, int length);
+		void NonWebSocketSend(byte[] data, int offset, int length);
 	}
 }
